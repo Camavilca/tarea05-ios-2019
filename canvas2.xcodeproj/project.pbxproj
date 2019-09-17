@@ -13,6 +13,9 @@
 		7D80BDCC2331672900B2195D /* canvas2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D80BDCA2331672900B2195D /* canvas2.xcdatamodeld */; };
 		7D80BDCE2331672B00B2195D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D80BDCD2331672B00B2195D /* Assets.xcassets */; };
 		7D80BDD12331672B00B2195D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D80BDCF2331672B00B2195D /* LaunchScreen.storyboard */; };
+		7D80BDD92331674200B2195D /* NewCursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80BDD82331674200B2195D /* NewCursoViewController.swift */; };
+		7D80BDDB2331674D00B2195D /* Curso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80BDDA2331674D00B2195D /* Curso.swift */; };
+		7D80BDDD23316D0900B2195D /* SelectCursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80BDDC23316D0900B2195D /* SelectCursoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7D80BDCD2331672B00B2195D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D80BDD02331672B00B2195D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D80BDD22331672B00B2195D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D80BDD82331674200B2195D /* NewCursoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCursoViewController.swift; sourceTree = "<group>"; };
+		7D80BDDA2331674D00B2195D /* Curso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curso.swift; sourceTree = "<group>"; };
+		7D80BDDC23316D0900B2195D /* SelectCursoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCursoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				7D80BDCF2331672B00B2195D /* LaunchScreen.storyboard */,
 				7D80BDD22331672B00B2195D /* Info.plist */,
 				7D80BDCA2331672900B2195D /* canvas2.xcdatamodeld */,
+				7D80BDD82331674200B2195D /* NewCursoViewController.swift */,
+				7D80BDDA2331674D00B2195D /* Curso.swift */,
+				7D80BDDC23316D0900B2195D /* SelectCursoViewController.swift */,
 			);
 			path = canvas2;
 			sourceTree = "<group>";
@@ -138,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D80BDDB2331674D00B2195D /* Curso.swift in Sources */,
+				7D80BDDD23316D0900B2195D /* SelectCursoViewController.swift in Sources */,
+				7D80BDD92331674200B2195D /* NewCursoViewController.swift in Sources */,
 				7D80BDCC2331672900B2195D /* canvas2.xcdatamodeld in Sources */,
 				7D80BDC62331672900B2195D /* ViewController.swift in Sources */,
 				7D80BDC42331672900B2195D /* AppDelegate.swift in Sources */,
