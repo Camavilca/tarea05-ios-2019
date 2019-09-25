@@ -12,6 +12,12 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
         tableViewCurso.dataSource = self
         tableViewCurso.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ObtenerCurso()
+        tableViewCurso.reloadData()
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cursos.count
@@ -25,14 +31,14 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
         if res {
             cell.backgroundColor = UIColor.green
         }else {
-            cell.backgroundColor = UIColor.blue
+            cell.backgroundColor = UIColor.cyan
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         indexSeleccionado = indexPath.row
-        let curso = cursos[indexPath.row]
+        let curso = cursos[indexSeleccionado]
         performSegue(withIdentifier: "selectCurso", sender: curso)
     }
     
@@ -52,9 +58,9 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
 
         let res = pp + pl + ef
 
-        curso.notaFinal = Int(res)
+        curso.notaFinal = Int32(Int(res))
         
-        if res > 13 {
+        if res >= 13 {
             return true;
         }else{
             return false;
@@ -66,12 +72,21 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
         performSegue(withIdentifier: "newcurso", sender: nil)
     }
     
+    func ObtenerCurso(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do{
+            cursos = try context.fetch(Curso.fetchRequest()) as! [Curso]
+        }catch{
+            print("HA OCURRIDO UN ERROR")
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier ==  "newcurso"{
+       /* if segue.identifier ==  "newcurso"{
             let siguienteVC = segue.destination as! NewCursoViewController
             siguienteVC.firsVC = self
-        }
+        }*/
         
         if segue.identifier == "selectCurso" {
             let selectVC = segue.destination as! SelectCursoViewController

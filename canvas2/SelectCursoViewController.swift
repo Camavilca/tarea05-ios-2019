@@ -26,7 +26,7 @@ class SelectCursoViewController: UIViewController {
         labelExamenFinal.text = String(curso.examenFinal)
         notaFinal.text = String(curso.notaFinal)
         
-        if curso.notaFinal > 13 {
+        if curso.notaFinal >= 13 {
             self.ImgView.image = UIImage(named: "aprobado")
         }else{
              self.ImgView.image = UIImage(named: "desaprobado")
